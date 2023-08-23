@@ -1,0 +1,111 @@
+<html>
+    <head>
+	   <title>Pokedex</title>
+	   <link rel="stylesheet" href="estilosP.css">
+	   <link rel="icon" href="favicon.png"/>
+	   
+	</head>
+<body>
+  <div class="capsulaN">
+   <img src="ballAbierta.png">
+    <nav class="navegador">
+     <ul>
+	   <li><a href="pokedex.html">Inicio</a></li>
+	   <li><a href="acercaP.html">Acerca de</a></li>
+	 </ul>
+    </nav>
+  </div>
+	<div class="capsulaSub">
+	
+	<div class="subtitulo">
+	  <img src="pokedex.png">
+	 </div>
+	 <div class="texto">	 
+	   Echa un vistazo a los pokemon capturados
+	 </div>
+	</div>
+	<div class="buscador">
+	  <input type="text" id="busqueda"></input><button id="boton">Search</button>
+	</div>
+	<div class="stats">
+	Tipo:
+	<br>
+	Nombre:
+	<br>
+	Indice captura:
+	<br>
+	Naturaleza:
+	</div>
+	<div id="informacion">
+	 <div id="lista"></div>
+	 <div id="lista1"></div>
+	 <div id="lista2"></div>
+	 <div id="lista3"></div>
+	</div>
+	<script>
+	  function Pokemon(numero , nombre, indice, naturaleza, peso, tipo, categoria){
+	this.numeroP = numero;
+	this.nombreP = nombre;
+	this.capturaP = indice;
+	this.naturalezaP = naturaleza;
+	this.pesoP = peso;
+	this.tipoP = tipo;
+	this.categoriaP = categoria;
+}
+
+ 
+var poke1=new Pokemon(1,"Charmander",0.5,"Agresiva",5.5,"Fuego","Rana");
+var poke2=new Pokemon(2,"Charmeleon",0.7,"Agresiva",5.7,"Fuego","Rana");
+var poke3=new Pokemon(3,"Charizard",0.1,"Agresiva",8,"Fuego","Rana");
+var poke4=new Pokemon(4,"Bulbasaur",0.6,"Pasiva",4,"Planta/Veneno","Rana");
+var poke5=new Pokemon(5,"Ivisaur",0.7,"Pasiva",4.7,"Planta/Veneno","Rana");
+var poke6=new Pokemon(6,"Venasaur",0.2,"Pasiva",5.7,"Planta/Veneno","Rana");
+var poke7=new Pokemon(7,"Squirtle",0.7,"Agresiva",2,"Agua","Tortuga");
+var poke8=new Pokemon(8,"Wartortle",0.7,"Agresiva",4,"Agua","Tortuga");
+var poke9=new Pokemon(9,"Blastoise",0.3,"Agresiva",9.1,"Agua","Tortuga");
+var poke10=new Pokemon(10,"Ekans",0.7,"Pasiva",5,"Veneno","Serpiente");
+var poke11=new Pokemon(11,"Arbock",0.7,"Pasiva",8,"Veneno","Serpiente");
+
+//Base de datos
+var nuevoPoke = [];
+
+    nuevoPoke.push(poke1);
+	nuevoPoke.push(poke2);
+	nuevoPoke.push(poke3);
+	nuevoPoke.push(poke4);
+	nuevoPoke.push(poke5);
+	nuevoPoke.push(poke6);
+	nuevoPoke.push(poke7);
+	nuevoPoke.push(poke8);
+	nuevoPoke.push(poke9);
+	nuevoPoke.push(poke10);
+	nuevoPoke.push(poke11);
+	
+
+
+ 
+ var elemento = document.getElementById("boton");
+ elemento.addEventListener("click", buscar);
+     
+function buscar(){
+    var valor = document.getElementById("busqueda").value;
+	for(var a=0; a<=11; a++){
+	    if(valor==nuevoPoke[a].nombreP){
+		  document.getElementById("lista").innerHTML=nuevoPoke[a].tipoP;
+		  document.getElementById("lista1").innerHTML=nuevoPoke[a].nombreP;
+		  document.getElementById("lista2").innerHTML=nuevoPoke[a].capturaP;
+		  document.getElementById("lista3").innerHTML=nuevoPoke[a].naturalezaP;
+          		  
+		}else{
+		  continue;
+		}
+	 
+	}
+	
+	
+}
+
+	</script>
+	
+</body>
+</html>

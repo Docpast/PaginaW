@@ -1,0 +1,30 @@
+<html>
+ <head> 
+    <title>Pagina</title>
+    <script src="jquery-3.7.0.min.js"></script>
+	<link rel="stylesheet" href="estilos.css">
+ </head>
+ <body>
+    <div class="parrafo" id="parrafo">
+	   <p>Parrafo de ejemplo</p>
+	</div>
+  <div class="bMayor">
+    <div class="bMenor">
+      <input type="button" name="Ocultar" value="Ocultar" id="bOcultar">
+      <input type="button" name="Mostrar" value="Mostrar" id="bMostrar">
+    </div>
+  </div>
+    
+   
+    <script>
+	    $(document).ready(function(){
+		    $("#bOcultar").click(function(){
+			    $("#parrafo").hide(3000);
+			});
+			$("#bMostrar").click(function(){
+			    $("#parrafo").show(3000);
+			});
+		});
+	</script>
+ </body>
+</html>

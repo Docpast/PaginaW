@@ -1,0 +1,115 @@
+body{
+	margin:0;
+	padding:0;
+}
+.capsulaN{
+	width:100%;
+	height:75px;
+	background:rgb(233,99,71);
+}
+.capsulaN img{
+	float:left;
+	height:75px;
+	width:125px;
+}
+.navegador{
+	width:60%;
+	height:100%;
+	margin:auto;
+	background:rgb(233,51,47);
+}
+.navegador ul{
+	float:right;
+	margin-top:3%;
+	margin-right:4%;
+	
+}
+.navegador ul li{
+    display:inline-block;
+	margin-right:12px;
+}
+.navegador ul li a{
+	text-decoration:none;
+	color:black;
+}
+.capsulaSub{
+	position:relative;
+	width:100%;
+	height:60%;
+	display:block;
+}
+.subtitulo{
+	
+	width:50%;
+	height:90%;
+	margin:0 25%;
+}
+.subtitulo img{
+	width:100%;
+	height:100%;
+}
+.texto{
+	font-style:italic;
+	width:60%;
+	height:10%;
+	margin:0 20%;
+	text-align:center;
+}
+.buscador{
+	float:left;
+	margin:0 5%;
+	height:10%;
+	width:25%;
+	border:1px solid;
+	border-radius:6%;
+}
+.buscador input{
+	margin:6% 5%;	
+}
+.stats{
+	height:20%;
+	width:7%;
+	background:red;
+	float:left;
+}
+#informacion{
+	background:green;
+	height:20%;
+	width:14%;
+	margin:0 43%;
+	position:relative;
+	background:rgb(26,158,47);
+	text-align:center;
+}
+/*Acerca de*/
+.ladoA{
+	float:right;
+	height:100%;
+	width:10%;
+	background:rgb(251,33,47);
+	text-align:center;
+	padding:3% 5%;
+}
+.ladoB{
+	float:left;
+	height:100%;
+	width:10%;
+	background:rgb(251,33,47);
+	text-align:center;
+	padding:3% 5%;
+}
+.contenedor{
+	position:relative;
+	height:100%;
+	width:20%;
+	background:rgb(240,30,25);
+    margin:0 35%;
+	text-align:center;
+	padding:3% 5%;
+}
+@media (min-width: 800px){
+	.navegador ul li{
+    margin-top:3%;
+	margin-right:12px;
+  }
+}

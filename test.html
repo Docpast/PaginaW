@@ -1,0 +1,49 @@
+<html>
+    <head>
+	 
+	   
+	</head>
+<body>
+ 
+	<div class="buscador">
+	  <input type="text" id="busqueda"></input><button id="boton">Search</button>
+	</div>
+	<div id="informacion"></div>
+	<script>
+	  function Pokemon(numero , nombre, indice, naturaleza, peso, tipo){
+	this.numeroP = numero;
+	this.nombreP = nombre;
+	this.capturaP = indice;
+	this.naturalezaP = naturaleza;
+	this.pesoP = peso;
+	this.tipoP = tipo;
+}
+
+ 
+const poke1=new Pokemon(1,"Charmander",0.5,"agresiva",5.5);
+const poke2=new Pokemon(2,"Charmeleon",0.7,"agresiva",5.7);
+
+ 
+ const elemento = document.getElementById("boton");
+ elemento.addEventListener("click", buscar);
+ 
+function buscar(){
+var pokemonN;
+  var valor = document.getElementById("busqueda").value;
+for(var i=1; i<2; i++){
+  var nuevoPoke = "poke" + i;
+   if(valor==nuevoPoke.nombreP){
+      pokemonN = valor;
+   }else{
+     alert("nombre de pokemon inexistente");
+   }
+}
+
+
+document.getElementById("informacion").innerHTML = pokemonN;
+}
+
+	</script>
+	
+</body>
+</html>
